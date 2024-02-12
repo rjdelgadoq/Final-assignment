@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strings.html</title>
+    <link href="strings.css" rel="stylesheet" type="text/css">
+</head>
+<nav>
+    <ol>
+        <li><a href="game2.html">Game</a></li>
+        <li><a href="boards.html">boards</a></li>
+        <li><a href="index.html">Index</a></li>
+        <li><a href="strings.html">Strings</a></li>
+        <li><a href="final assignment.html">Home</a></li>
+    </ol>
+</nav>
+<p>
+    <script>
+        //This is the palindrome checker
+        function isPalidrome(str) {
+            let j= str.length -1
+            for (let i=0; i < str.length/2; i++) {
+                if (str[i] !=str[j]) {
+                    return false;
+                }
+                j--;
+            }
+            return true;
+        }
+//This alerts the user if the correct response is a palindrome or not.
+        let str=prompt("please enter a palindrome");
+        if (isPalidrome(str) == true) {
+            alert("This is a palidrome")
+        }
+        else if (isPalidrome(str) == false) {
+            alert("This is not a palidrome")
+        }
+      //This logs the data to console  
+        console.log(isPalidrome(prompt));
+
+    </script>
+    <p> Welcome to my palidrome checker. Please use the prompt to see if your word 
+        is a palidrome. Use the refresh button to enter a new word.
+    </p>
+    <h1 style="text-align: center">Registration Form</h1>
+    <form name="RegForm" action="/submit.php" onsubmit="return validation()" method="post">
+    <p>First: <input type="text" size="65" name="First"></p><br>
+    <p>Last: <input type="text" size=65 name="Last"></p><br>
+    <p>Zip: <input type="text" size=65 name="Zip"></p><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>
+    <script>
+        function validation() {
+            var firstName = document.forms["RegForm"]["First Name"];
+            var last = document.forms["RegForm"]["Last"];
+            var zip = document.forms["RegForm"]["Zip"];
+            if(first.length + "" + last.length > 20 || zip.length > 5) {
+                windows.alert("Please enter a valid name");
+                name.focus();
+                return false;
+                }
+            return true;
+            windows.alert("This is the secret message")
+            }
+    </script>
+</p>
+
+</body>
+</html>

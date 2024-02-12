@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+    background-color: darkred;
+    color: black;
+    margin: 10px;
+}
+h2 {
+    background-color: black;
+    text-align: center;
+    color: darkred
+    margin: 25px;
+}
+body {
+    background-color: black;
+
+}
